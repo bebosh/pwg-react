@@ -10,10 +10,10 @@ const Module = () => {
 
   // functions
 
-  /*const parsedValue = parseInt(length);
+  const parsedValue = parseInt(length);
     if(!isNaN(parsedValue)){
         setLength (parsedValue);
-    }*/
+    }
 
   var clickEvent = () => {
     const numbers = "1234567890";
