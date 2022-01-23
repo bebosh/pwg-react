@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Module from './Module';
+import 'bulma/css/bulma.min.css';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="columns is-centered">
+        <div className="box column is-one-third">  
+            <h1 className='title has-text-centered'>Password generator</h1> 
+              <Module />
+        </div>
+      </div>
     </div>
+    
   );
 }
 
