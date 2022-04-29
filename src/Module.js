@@ -62,7 +62,7 @@ const Module = () => {
         <label>Enter length</label>
         <input
           className="input"
-          value={length}
+          defaultValue={length}
           onChange={(e) => {
             onChangeInput(e);
           }}
@@ -70,7 +70,7 @@ const Module = () => {
       </div>
 
       <div className="field">
-        <div class="control">
+        <div className="control">
           <label className="checkbox">
             <input onChange={clickUseLetters} type="checkbox" />
             Use letters
@@ -79,7 +79,7 @@ const Module = () => {
       </div>
 
       <div className="field">
-        <div class="control">
+        <div className="control">
           <label className="checkbox">
             <input onChange={clickUseNumbers} type="checkbox" />
             Use numbers
@@ -88,7 +88,7 @@ const Module = () => {
       </div>
 
       <div className="field">
-        <div class="control">
+        <div className="control">
           <label className="checkbox">
             <input onChange={clickUseSymbols} type="checkbox" />
             Use symbols
@@ -108,7 +108,7 @@ const Module = () => {
       {password !== '' && (
         <div className="box">
           <label>Your password</label>
-          <input className="input" value={password} />
+          <input className="input" defaultValue={password} />
         </div>
       )}
     </div>
