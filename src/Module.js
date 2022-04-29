@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const Module = () => {
   // states
-  const [length, setLength] = useState("");
-  const [password, setPassword] = useState("");
+  const [length, setLength] = useState('');
+  const [password, setPassword] = useState('');
   const [useLetters, setUseLetters] = useState(false);
   const [useNumbers, setUseNumbers] = useState(false);
   const [useSymbols, setUseSymbols] = useState(false);
@@ -11,16 +11,16 @@ const Module = () => {
   // functions
 
   const parsedValue = parseInt(length);
-    if(!isNaN(parsedValue)){
-        setLength (parsedValue);
-    }
+  if (!isNaN(parsedValue) && parsedValue !== length) {
+    setLength(parsedValue);
+  }
 
   var clickEvent = () => {
-    const numbers = "1234567890";
-    const letters = "abcdefghijklmopqrstuvwxyz";
-    const symbols = "!£$%&^?()_";
+    const numbers = '1234567890';
+    const letters = 'abcdefghijklmopqrstuvwxyz';
+    const symbols = '!£$%&^?()_';
 
-    let validChars = "";
+    let validChars = '';
 
     if (useLetters) {
       validChars += letters;
@@ -31,8 +31,8 @@ const Module = () => {
     if (useSymbols) {
       validChars += symbols;
     }
-    console.log("STEP_1 " + validChars);
-    let generatedPassword = "";
+    console.log('STEP_1 ' + validChars);
+    let generatedPassword = '';
 
     for (let i = 0; i < length; i++) {
       const index = Math.floor(Math.random() * validChars.length);
@@ -97,14 +97,15 @@ const Module = () => {
       </div>
 
       <div className="field">
-        <button className="button is-link is-fullwidth"
+        <button
+          className="button is-link is-fullwidth"
           disabled={!(length && (useLetters || useNumbers || useSymbols))}
           onClick={clickEvent}
         >
           Generate!
         </button>
       </div>
-      {password !== "" && (
+      {password !== '' && (
         <div className="box">
           <label>Your password</label>
           <input className="input" value={password} />
